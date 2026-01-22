@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: agendamento-notificacao-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/db_agendamento
+    username: app
+    password: app
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
