@@ -2,16 +2,14 @@ package com.maxdev.agendamento_notificacao_api.infrastructure.entities;
 
 import com.maxdev.agendamento_notificacao_api.infrastructure.enums.StatusNotificacaoEnum;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Table(name = "agendamento")
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
